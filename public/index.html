@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mior Liar Bar</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🃏 Mior Liar Bar</h1>
+    <div id="createJoin">
+      <button id="createRoomBtn">Create Room</button>
+      <div class="join">
+        <input id="roomInput" placeholder="Enter Room ID" />
+        <button id="joinRoomBtn">Join Room</button>
+      </div>
+      <p class="tip">Share the URL after you create/join: <code id="shareUrl"></code></p>
+    </div>
+
+    <div id="lobby" class="hidden card">
+      <div class="row">
+        <label>Your name</label>
+        <input id="nameInput" placeholder="e.g., Mior" />
+        <button id="saveNameBtn">Save</button>
+      </div>
+      <div class="row">
+        <span>Room ID: <b id="roomIdLabel"></b></span>
+        <span>Host: <b id="hostLabel">—</b></span>
+      </div>
+      <div id="players" class="players"></div>
+
+      <div class="row">
+        <label>Cards per player</label>
+        <input id="cpp" type="number" min="1" max="10" value="6" />
+        <button id="dealBtn">Deal (host only)</button>
+      </div>
+    </div>
+
+    <div id="handArea" class="hidden card">
+      <h2>Your Hand</h2>
+      <div id="hand" class="cards"></div>
+      <button id="revealBtn">Reveal my hand</button>
+    </div>
+
+    <div id="roundInfo" class="hidden card">
+      <h3>Round</h3>
+      <div id="roundSummary"></div>
+      <div id="reveals"></div>
+    </div>
+  </div>
+
+  <script src="/client.js" type="module"></script>
+</body>
+</html>
