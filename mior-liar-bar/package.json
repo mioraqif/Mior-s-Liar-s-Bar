@@ -1,0 +1,17 @@
+{
+  "name": "mior-liar-bar",
+  "version": "1.0.0",
+  "description": "Simple web-based multiplayer card dealing game with Socket.IO",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "NODE_ENV=development node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5",
+    "nanoid": "^5.0.7",
+    "cors": "^2.8.5"
+  }
+}
